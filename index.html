@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Eme Aromas · Perfumes Árabes</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#c9a84c;--gold-light:#e8d5a3;--gold-dark:#8a6f2e;--cream:#faf6f0;--dark:#0e0b08;--dark2:#1a1410;--dark3:#2a2018;--text:#3a2e20;--text-light:#7a6a55;--teal:#4ab3b0;--white:#ffffff;--green:#27ae60;--red:#e74c3c;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;font-size:14px;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--dark2);}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(14,11,8,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);transition:padding 0.3s;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.nav-logo-circle{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#e8f8f7,var(--teal));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.nav-logo-eme{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);line-height:1;}
+.nav-logo-sub{font-size:7px;font-weight:600;color:var(--gold);letter-spacing:3px;text-transform:uppercase;}
+.nav-links{display:none;}
+@media(min-width:768px){nav{padding:14px 40px;}.nav-links{display:flex;gap:24px;}.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}.nav-links a:hover{color:var(--gold);}}
+.nav-cart{position:relative;cursor:pointer;color:var(--white);font-size:18px;background:none;border:none;}
+.cart-badge{position:absolute;top:-6px;right:-6px;width:16px;height:16px;border-radius:50%;background:var(--gold);color:var(--dark);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 40%,#1f1508 70%,#2a1a05 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:90px 16px 50px;text-align:center;}
+.hero-bg{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:22px 22px;}
+.hero-glow{position:absolute;top:20%;left:50%;transform:translateX(-50%);width:min(450px,85vw);height:min(450px,85vw);border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
+.hero-content{position:relative;z-index:2;max-width:650px;width:100%;}
+.hero-sub{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,12vw,96px);font-weight:300;color:var(--white);line-height:0.9;margin-bottom:8px;}
+.hero-title em{font-style:italic;color:var(--gold);}
+.hero-tag{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,4vw,21px);font-weight:300;font-style:italic;color:rgba(255,255,255,0.45);margin-bottom:28px;}
+.hero-div{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:28px;}
+.hdl{flex:1;max-width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
+.hdr{background:linear-gradient(90deg,var(--gold),transparent);}
+.hdm{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.hero-cta:hover{background:var(--gold);color:var(--dark);}
+.hero-stats{display:flex;gap:24px;justify-content:center;margin-top:40px;flex-wrap:wrap;}
+.hs{text-align:center;}.hs-n{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--gold);line-height:1;}
+.hs-l{font-size:7px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:2px;}
+.catalog-section{padding:50px 14px;}
+@media(min-width:768px){.catalog-section{padding:70px 40px;}}
+.sh{text-align:center;margin-bottom:32px;}
+.sl{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.st{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,6vw,44px);font-weight:300;color:var(--text);}
+.st em{font-style:italic;}
+.fw{background:var(--dark2);padding:18px 14px;margin-bottom:24px;border-top:1px solid rgba(201,168,76,0.2);border-bottom:1px solid rgba(201,168,76,0.2);}
+@media(min-width:768px){.fw{padding:24px 40px;}}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(min-width:600px){.fg{grid-template-columns:repeat(3,1fr);gap:12px;}}
+@media(min-width:900px){.fg{grid-template-columns:repeat(5,1fr) auto;align-items:end;gap:14px;}}
+.fgrp{display:flex;flex-direction:column;gap:5px;}
+.flbl{font-size:7px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);}
+.fsel,.finp{background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);color:var(--white);padding:8px 10px;font-family:'Montserrat',sans-serif;font-size:11px;cursor:pointer;outline:none;width:100%;appearance:none;transition:border-color 0.3s;}
+.fsel:focus,.finp:focus{border-color:var(--gold);}
+.fsel option{background:var(--dark2);}
+.fsearch{grid-column:1/-1;}
+@media(min-width:900px){.fsearch{grid-column:auto;}}
+.finp-w{position:relative;}.finp-w .finp{padding-right:32px;}
+.sico{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:12px;pointer-events:none;}
+.fclr{padding:8px 16px;background:transparent;border:1px solid rgba(201,168,76,0.3);color:rgba(255,255,255,0.5);font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;white-space:nowrap;grid-column:1/-1;}
+@media(min-width:900px){.fclr{grid-column:auto;}}
+.fclr:hover{border-color:var(--gold);color:var(--gold);}
+.rc{font-size:9px;color:rgba(255,255,255,0.4);margin-top:10px;}.rc span{color:var(--gold);font-weight:600;}
+.pg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:1400px;margin:0 auto;}
+@media(min-width:480px){.pg{gap:14px;}}
+@media(min-width:768px){.pg{grid-template-columns:repeat(3,1fr);gap:20px;}}
+@media(min-width:1100px){.pg{grid-template-columns:repeat(4,1fr);}}
+.pc{background:var(--white);position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer;border:1px solid rgba(201,168,76,0.1);}
+.pc:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(201,168,76,0.12);}
+.piw{position:relative;overflow:hidden;aspect-ratio:3/4;background:linear-gradient(135deg,#f5f0e8,#ede5d8);}
+.piw img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.pc:hover .piw img{transform:scale(1.04);}
+.pgb{position:absolute;top:7px;left:7px;padding:2px 7px;font-size:7px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:rgba(14,11,8,0.8);color:var(--gold-light);}
+.pyb{position:absolute;top:7px;right:7px;padding:2px 7px;font-size:7px;background:rgba(201,168,76,0.9);color:var(--dark);}
+.po{position:absolute;inset:0;background:rgba(14,11,8,0.85);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;transition:opacity 0.3s;}
+.pc:hover .po{opacity:1;}
+.bqa{padding:8px 20px;background:var(--gold);color:var(--dark);font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;}
+.bda{padding:6px 20px;background:transparent;color:var(--white);font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(255,255,255,0.3);cursor:pointer;}
+.pinfo{padding:10px;}
+.pbr{font-size:7px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
+.pnm{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:var(--text);margin-bottom:3px;line-height:1.2;}
+.pfm{font-size:8px;color:var(--text-light);margin-bottom:6px;}
+.pnp{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px;}
+.nt{font-size:7px;padding:2px 5px;background:var(--cream);border:1px solid rgba(201,168,76,0.2);color:var(--text-light);}
+.pft{display:flex;align-items:center;justify-content:space-between;}
+.ppr{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--text);}
+.pph{font-size:10px;font-style:italic;color:var(--text-light);font-family:'Montserrat',sans-serif;}
+.bac{padding:6px 10px;background:var(--dark);color:var(--gold);font-size:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;transition:all 0.3s;font-family:'Montserrat',sans-serif;}
+.bac:hover{background:var(--gold);color:var(--dark);}
+.co{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2000;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.co.open{opacity:1;pointer-events:all;}
+.cs{position:fixed;top:0;right:0;bottom:0;width:min(360px,100vw);background:var(--dark2);z-index:2001;transform:translateX(100%);transition:transform 0.4s ease;display:flex;flex-direction:column;border-left:1px solid rgba(201,168,76,0.2);}
+.cs.open{transform:translateX(0);}
+.ch{padding:18px 20px;border-bottom:1px solid rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:space-between;}
+.ct{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--white);}
+.cc{background:none;border:none;color:rgba(255,255,255,0.5);font-size:20px;cursor:pointer;}
+.ci{flex:1;overflow-y:auto;padding:14px 18px;}
+.cit{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.06);}
+.cii{width:50px;height:50px;object-fit:cover;background:var(--dark3);flex-shrink:0;}
+.cin{flex:1;}
+.cinm{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--white);margin-bottom:2px;}
+.cibr{font-size:8px;color:var(--gold);letter-spacing:1px;}
+.cipr{font-size:11px;color:rgba(255,255,255,0.5);margin-top:2px;}
+.cictl{display:flex;align-items:center;gap:6px;margin-top:5px;}
+.qb{background:rgba(255,255,255,0.08);border:none;color:var(--white);width:20px;height:20px;cursor:pointer;font-size:13px;display:flex;align-items:center;justify-content:center;}
+.qb:hover{background:var(--gold);color:var(--dark);}
+.qn{font-size:12px;color:var(--white);min-width:16px;text-align:center;}
+.crm{background:none;border:none;color:rgba(255,255,255,0.3);cursor:pointer;font-size:13px;margin-left:auto;}
+.crm:hover{color:var(--red);}
+.cem{text-align:center;padding:40px 20px;}
+.cem-i{font-size:36px;margin-bottom:10px;opacity:0.3;}
+.cem-t{font-family:'Cormorant Garamond',serif;font-size:18px;color:rgba(255,255,255,0.4);}
+.cf{padding:18px 20px;border-top:1px solid rgba(201,168,76,0.15);}
+.cst{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+.csl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.5);}
+.csp{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--gold);font-style:italic;}
+.bck{width:100%;padding:13px;background:var(--gold);color:var(--dark);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;margin-bottom:7px;}
+.bck:hover{background:var(--gold-light);}
+.mpn{text-align:center;font-size:8px;color:rgba(255,255,255,0.3);display:flex;align-items:center;gap:4px;justify-content:center;}
+.mo{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:3000;opacity:0;pointer-events:none;transition:opacity 0.3s;display:flex;align-items:center;justify-content:center;padding:14px;}
+.mo.open{opacity:1;pointer-events:all;}
+.mm{background:var(--white);max-width:760px;width:100%;max-height:90vh;overflow-y:auto;display:flex;flex-direction:column;transform:scale(0.95);transition:transform 0.3s;}
+@media(min-width:580px){.mm{flex-direction:row;}}
+.mo.open .mm{transform:scale(1);}
+.miw{background:linear-gradient(135deg,#f5f0e8,#ede5d8);display:flex;align-items:center;justify-content:center;min-height:200px;flex-shrink:0;}
+@media(min-width:580px){.miw{width:44%;min-height:380px;}}
+.miw img{width:100%;height:100%;object-fit:cover;}
+.mc{padding:24px 20px;display:flex;flex-direction:column;}
+.mcs{align-self:flex-end;background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-light);margin-bottom:12px;}
+.mbr{font-size:8px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
+.mnm{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--text);margin-bottom:3px;line-height:1.1;}
+.mfm{font-size:10px;color:var(--text-light);margin-bottom:10px;font-style:italic;}
+.mbd{display:flex;gap:7px;margin-bottom:13px;flex-wrap:wrap;}
+.mbdg{padding:3px 9px;border:1px solid rgba(201,168,76,0.3);font-size:8px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);}
+.mdv{height:1px;background:rgba(201,168,76,0.15);margin:10px 0;}
+.mns{margin-bottom:10px;}
+.mnsl{font-size:8px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:5px;}
+.mnsl2{display:flex;flex-wrap:wrap;gap:4px;}
+.mnt{padding:2px 8px;background:var(--cream);border:1px solid rgba(201,168,76,0.2);font-size:9px;color:var(--text);}
+.mpr{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:13px;gap:10px;flex-wrap:wrap;}
+.mprc{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--text);font-style:italic;}
+.bma{padding:10px 18px;background:var(--dark);color:var(--gold);font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:all 0.3s;}
+.bma:hover{background:var(--gold);color:var(--dark);}
+.aw{background:var(--dark);}
+.as{padding:50px 16px;max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:32px;}
+@media(min-width:768px){.as{flex-direction:row;align-items:center;padding:70px 40px;gap:50px;}}
+.al{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+.at{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,5vw,40px);font-weight:300;color:var(--white);line-height:1.2;margin-bottom:15px;}
+.ab{font-size:12px;line-height:1.8;color:rgba(255,255,255,0.6);margin-bottom:12px;}
+.aci{display:flex;flex-direction:column;gap:7px;margin-top:13px;}
+.acit{display:flex;align-items:flex-start;gap:7px;font-size:11px;color:rgba(255,255,255,0.6);}
+.acic{color:var(--gold);font-size:13px;flex-shrink:0;margin-top:1px;}
+.aig{display:flex;align-items:center;gap:7px;color:var(--teal);font-size:11px;text-decoration:none;margin-top:7px;}
+.avis{display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.aoc{width:190px;height:190px;border-radius:50%;border:1px solid rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;animation:rot 30s linear infinite;}
+.aic{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#e8f8f7,var(--teal) 60%,#2a9a97);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--white);font-style:italic;}
+@keyframes rot{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.admsec{padding:50px 14px;background:var(--dark3);border-top:3px solid var(--gold-dark);}
+@media(min-width:768px){.admsec{padding:60px 40px;}}
+.adm-wrap{max-width:1000px;margin:0 auto;}
+.adm-tabs{display:flex;border-bottom:1px solid rgba(201,168,76,0.2);overflow-x:auto;margin-bottom:24px;}
+.adm-tab{padding:9px 16px;background:transparent;border:none;color:rgba(255,255,255,0.4);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;transition:all 0.3s;}
+.adm-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.adm-tc{display:none;}.adm-tc.active{display:block;}
+.adm-login{max-width:340px;margin:0 auto;text-align:center;}
+.adm-ttl{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--white);margin-bottom:5px;}
+.adm-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:26px;}
+.adm-inp{width:100%;padding:10px 13px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);color:var(--white);font-family:'Montserrat',sans-serif;font-size:13px;margin-bottom:12px;outline:none;transition:border-color 0.3s;}
+.adm-inp:focus{border-color:var(--gold);}
+.adm-inp::placeholder{color:rgba(255,255,255,0.3);}
+.adm-panel{display:none;}.adm-panel.active{display:block;}
+.adm-ph{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px;}
+.btn-pri{padding:10px 20px;background:var(--gold);color:var(--dark);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;transition:all 0.3s;}
+.btn-pri:hover{background:var(--gold-light);}
+.btn-sec{padding:7px 14px;background:transparent;border:1px solid rgba(201,168,76,0.3);color:rgba(255,255,255,0.5);font-family:'Montserrat',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;}
+.btn-sec:hover{border-color:var(--gold);color:var(--gold);}
+.ag{display:grid;grid-template-columns:1fr;gap:12px;}
+@media(min-width:480px){.ag{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:900px){.ag{grid-template-columns:repeat(3,1fr);}}
+.acard{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.2);padding:14px;display:flex;flex-direction:column;gap:8px;}
+.acn{font-family:'Cormorant Garamond',serif;font-size:17px;color:var(--white);}
+.acm{font-size:8px;color:rgba(255,255,255,0.35);letter-spacing:1px;}
+.apr{display:flex;gap:8px;align-items:center;}
+.api{flex:1;padding:8px 11px;background:rgba(255,255,255,0.06);border:1px solid rgba(201,168,76,0.3);color:var(--white);font-family:'Montserrat',sans-serif;font-size:12px;outline:none;}
+.api:focus{border-color:var(--gold);}
+.aok{font-size:8px;color:var(--green);display:none;}
+.ord-empty{text-align:center;padding:40px 20px;}
+.ord-empty-i{font-size:40px;margin-bottom:10px;opacity:0.3;}
+.ord-empty-t{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(255,255,255,0.4);}
+.ocard{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.2);padding:16px;margin-bottom:12px;}
+.ocard-h{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px;flex-wrap:wrap;gap:6px;}
+.oid{font-size:9px;color:var(--gold);letter-spacing:1px;}
+.odate{font-size:9px;color:rgba(255,255,255,0.4);}
+.ost{padding:2px 9px;font-size:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+.ost.pendiente{background:rgba(201,168,76,0.15);color:var(--gold);}
+.ost.pagado{background:rgba(39,174,96,0.15);color:var(--green);}
+.oitems{font-size:10px;color:rgba(255,255,255,0.5);margin-bottom:8px;}
+.ototal{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);}
+.add-form{max-width:560px;}
+.fg2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fgrp2{margin-bottom:14px;}
+.flbl2{display:block;font-size:8px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.fi2,.fs2,.fta{width:100%;padding:9px 12px;background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);color:var(--white);font-family:'Montserrat',sans-serif;font-size:12px;outline:none;transition:border-color 0.3s;}
+.fi2:focus,.fs2:focus,.fta:focus{border-color:var(--gold);}
+.fi2::placeholder,.fta::placeholder{color:rgba(255,255,255,0.3);}
+.fs2 option{background:var(--dark2);}
+.fta{resize:vertical;min-height:70px;}
+.add-ok{display:none;background:rgba(39,174,96,0.15);border:1px solid var(--green);color:var(--green);padding:10px 14px;font-size:11px;margin-top:10px;}
+footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(201,168,76,0.15);}
+.ftg{display:grid;grid-template-columns:1fr;gap:28px;max-width:1000px;margin:0 auto 28px;}
+@media(min-width:580px){.ftg{grid-template-columns:2fr 1fr 1fr;}}
+.fbe{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--white);margin-bottom:5px;}
+.ftag{font-size:10px;font-style:italic;color:rgba(255,255,255,0.4);margin-bottom:12px;}
+.ftct{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
+.ftcti{font-size:10px;color:rgba(255,255,255,0.5);display:flex;align-items:flex-start;gap:5px;}
+.ftig{color:var(--teal);font-size:10px;text-decoration:none;}
+.fct{font-size:8px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+.fli{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.fli li a{color:rgba(255,255,255,0.4);font-size:11px;text-decoration:none;transition:color 0.2s;}
+.fli li a:hover{color:var(--gold);}
+.fbot{text-align:center;padding-top:20px;border-top:1px solid rgba(255,255,255,0.06);font-size:9px;color:rgba(255,255,255,0.2);}
+.wabtn{position:fixed;bottom:20px;right:20px;z-index:999;width:50px;height:50px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 18px rgba(37,211,102,0.4);cursor:pointer;transition:transform 0.3s;text-decoration:none;font-size:24px;}
+.wabtn:hover{transform:scale(1.1);}
+.toast{position:fixed;bottom:80px;right:16px;z-index:5000;background:var(--dark2);border:1px solid var(--gold);color:var(--white);padding:11px 16px;font-size:11px;transform:translateY(100px);opacity:0;transition:all 0.3s;display:flex;align-items:center;gap:7px;max-width:calc(100vw - 32px);}
+.toast.show{transform:translateY(0);opacity:1;}
+.toi{color:var(--gold);font-size:13px;}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#inicio" class="nav-logo">
+    <div class="nav-logo-circle"><span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#1a1a1a;">E</span></div>
+    <div><div class="nav-logo-eme">Eme</div><div class="nav-logo-sub">Aromas</div></div>
+  </a>
+  <div class="nav-links">
+    <a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#nosotros">Nosotros</a><a href="#admin">Admin</a>
+  </div>
+  <button class="nav-cart" onclick="toggleCart()">🛒<span class="cart-badge" id="cartBadge">0</span></button>
+</nav>
+
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div><div class="hero-glow"></div>
+  <div class="hero-content">
+    <p class="hero-sub">Perfumes Árabes · Argentina</p>
+    <h1 class="hero-title"><em>Eme</em><br>Aromas</h1>
+    <p class="hero-tag">Aromas y emociones</p>
+    <div class="hero-div"><div class="hdl"></div><div class="hdm"></div><div class="hdl hdr"></div></div>
+    <a href="#catalogo" class="hero-cta">Explorar Catálogo ↓</a>
+    <div class="hero-stats">
+      <div class="hs"><div class="hs-n" id="heroCount">51+</div><div class="hs-l">Fragancias</div></div>
+      <div class="hs"><div class="hs-n">10+</div><div class="hs-l">Marcas</div></div>
+      <div class="hs"><div class="hs-n">100%</div><div class="hs-l">Originales</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog-section" id="catalogo">
+  <div class="sh"><p class="sl">Nuestra Colección</p><h2 class="st">Descubrí tu <em>fragancia perfecta</em></h2></div>
+  <div class="fw">
+    <div class="fg">
+      <div class="fgrp"><label class="flbl">Género</label><select class="fsel" id="fG" onchange="applyFilters()"><option value="">Todos</option><option>Mujer</option><option>Hombre</option><option>Unisex</option></select></div>
+      <div class="fgrp"><label class="flbl">Familia</label><select class="fsel" id="fF" onchange="applyFilters()"><option value="">Todas</option><option>Floral</option><option>Oriental</option><option>Amaderada</option><option>Chipre</option><option>Gourmand</option><option>Aromática</option><option>Acuática</option><option>Cítrica</option></select></div>
+      <div class="fgrp"><label class="flbl">Marca</label><select class="fsel" id="fM" onchange="applyFilters()"><option value="">Todas</option><option>Lattafa</option><option>Armaf</option><option>Afnan</option><option>Al Haramain</option><option>Maison Alhambra</option><option>Asdaaf</option><option>Paris Corner</option><option>Zimaya</option><option>Rasasi</option></select></div>
+      <div class="fgrp"><label class="flbl">Nota</label><select class="fsel" id="fN" onchange="applyFilters()"><option value="">Todas</option><option value="rosa">Rosa</option><option value="vainilla">Vainilla</option><option value="oud">Oud</option><option value="sándalo">Sándalo</option><option value="jazmín">Jazmín</option><option value="ámbar">Ámbar</option><option value="almizcle">Almizcle</option><option value="pachulí">Pachulí</option><option value="azafrán">Azafrán</option></select></div>
+      <div class="fgrp fsearch"><label class="flbl">Buscar</label><div class="finp-w"><input type="text" class="finp" id="fS" placeholder="Nombre del perfume..." oninput="applyFilters()"><span class="sico">🔍</span></div></div>
+      <button class="fclr" onclick="clearFilters()">✕ Limpiar</button>
+    </div>
+    <p class="rc">Mostrando <span id="rNum">0</span> fragancias</p>
+  </div>
+  <div class="pg" id="pg"></div>
+</section>
+
+<div class="aw"><section class="as" id="nosotros">
+  <div style="flex:1">
+    <p class="al">Quiénes Somos</p>
+    <h2 class="at">Aromas que despiertan <em style="font-style:italic;color:var(--gold);">emociones</em></h2>
+    <p class="ab">En Eme Aromas traemos lo mejor de la perfumería árabe directamente a Argentina. Cada fragancia es seleccionada por su calidad, originalidad y la emoción que evoca.</p>
+    <p class="ab">Trabajamos con las marcas más reconocidas: Lattafa, Paris Corner, Armaf, Al Haramain y muchas más. Todos nuestros perfumes son 100% originales.</p>
+    <div class="aci">
+      <div class="acit"><span class="acic">📍</span><span>San Martín 2254 · Galería San Martín Local 36</span></div>
+      <div class="acit"><span class="acic">📞</span><span>342 5 1 444 55</span></div>
+    </div>
+    <a href="https://instagram.com/emearomas.sf" target="_blank" class="aig">📷 @emearomas.sf</a>
+  </div>
+  <div class="avis"><div class="aoc"><div class="aic">E</div></div></div>
+</section></div>
+
+<section class="admsec" id="admin">
+  <div class="adm-wrap">
+    <div class="sh" style="margin-bottom:28px;"><p class="sl">Acceso Privado</p><h2 class="st" style="color:var(--white);">Panel de <em>Administración</em></h2></div>
+    <div class="adm-login" id="admLogin">
+      <h3 class="adm-ttl">Ingresar</h3><p class="adm-sub">Solo administradores</p>
+      <input type="password" class="adm-inp" id="admPw" placeholder="Contraseña" onkeydown="if(event.key==='Enter')doLogin()">
+      <button class="btn-pri" style="width:100%;margin-bottom:10px;" onclick="doLogin()">Ingresar</button>
+      <p style="font-size:9px;color:rgba(255,255,255,0.2);">Contraseña por defecto: <strong style="color:var(--gold);">eme2024</strong></p>
+    </div>
+    <div class="adm-panel" id="admPanel">
+      <div class="adm-ph"><p style="color:rgba(255,255,255,0.6);font-size:11px;">✅ Sesión iniciada</p><button class="btn-sec" onclick="doLogout()">Cerrar sesión</button></div>
+      <div class="adm-tabs">
+        <button class="adm-tab active" onclick="swTab('precios',this)">💰 Precios</button>
+        <button class="adm-tab" onclick="swTab('pedidos',this)">📦 Pedidos</button>
+        <button class="adm-tab" onclick="swTab('agregar',this)">➕ Agregar</button>
+      </div>
+      <div class="adm-tc active" id="tab-precios"><div class="ag" id="ag"></div></div>
+      <div class="adm-tc" id="tab-pedidos"><div id="ordCont"></div></div>
+      <div class="adm-tc" id="tab-agregar">
+        <div class="add-form">
+          <p style="color:rgba(255,255,255,0.45);font-size:11px;margin-bottom:20px;">Completá los datos del nuevo producto y aparecerá en el catálogo automáticamente.</p>
+          <div class="fg2">
+            <div class="fgrp2"><label class="flbl2">Nombre *</label><input type="text" class="fi2" id="nN" placeholder="Ej: Fakhar Rose"></div>
+            <div class="fgrp2"><label class="flbl2">Marca *</label><input type="text" class="fi2" id="nB" placeholder="Ej: Lattafa"></div>
+          </div>
+          <div class="fg2">
+            <div class="fgrp2"><label class="flbl2">Género *</label><select class="fs2" id="nGn"><option>Unisex</option><option>Mujer</option><option>Hombre</option></select></div>
+            <div class="fgrp2"><label class="flbl2">Familia *</label><select class="fs2" id="nFm"><option>Floral</option><option>Oriental</option><option>Amaderada</option><option>Chipre</option><option>Gourmand</option><option>Aromática</option><option>Acuática</option><option>Cítrica</option></select></div>
+          </div>
+          <div class="fg2">
+            <div class="fgrp2"><label class="flbl2">Año</label><input type="text" class="fi2" id="nY" placeholder="2024"></div>
+            <div class="fgrp2"><label class="flbl2">Precio (ARS)</label><input type="number" class="fi2" id="nP" placeholder="45000"></div>
+          </div>
+          <div class="fgrp2"><label class="flbl2">URL imagen (Imgur)</label><input type="text" class="fi2" id="nI" placeholder="https://i.imgur.com/XXXXX.jpg"></div>
+          <div class="fgrp2"><label class="flbl2">Notas de Salida</label><input type="text" class="fi2" id="nNS" placeholder="rosa, bergamota, jazmín (separadas por coma)"></div>
+          <div class="fgrp2"><label class="flbl2">Notas de Corazón</label><input type="text" class="fi2" id="nNC" placeholder="sándalo, vainilla"></div>
+          <div class="fgrp2"><label class="flbl2">Notas de Fondo</label><input type="text" class="fi2" id="nNF" placeholder="ámbar, almizcle"></div>
+          <button class="btn-pri" onclick="addProduct()">➕ Agregar al Catálogo</button>
+          <div class="add-ok" id="addOk">✅ Producto agregado correctamente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ftg">
+    <div>
+      <div class="fbe">Eme Aromas</div><div class="ftag">Aromas y emociones · Argentina</div>
+      <div class="ftct">
+        <div class="ftcti"><span>📍</span><span>San Martín 2254 · Galería San Martín Local 36</span></div>
+        <div class="ftcti"><span>📞</span><span>342 5 1 444 55</span></div>
+      </div>
+      <a href="https://instagram.com/emearomas.sf" target="_blank" class="ftig">📷 @emearomas.sf</a>
+    </div>
+    <div>
+      <div class="fct">Catálogo</div>
+      <ul class="fli"><li><a href="#" onclick="setF('fG','Mujer');return false;">Para Ella</a></li><li><a href="#" onclick="setF('fG','Hombre');return false;">Para Él</a></li><li><a href="#" onclick="setF('fG','Unisex');return false;">Unisex</a></li><li><a href="#" onclick="setF('fF','Oriental');return false;">Orientales</a></li><li><a href="#" onclick="setF('fF','Floral');return false;">Florales</a></li></ul>
+    </div>
+    <div>
+      <div class="fct">Marcas</div>
+      <ul class="fli"><li><a href="#" onclick="setF('fM','Lattafa');return false;">Lattafa</a></li><li><a href="#" onclick="setF('fM','Armaf');return false;">Armaf</a></li><li><a href="#" onclick="setF('fM','Al Haramain');return false;">Al Haramain</a></li><li><a href="#" onclick="setF('fM','Afnan');return false;">Afnan</a></li></ul>
+    </div>
+  </div>
+  <div class="fbot">© 2025 Eme Aromas · San Martín 2254 · Galería San Martín Local 36 · Tel: 342 5 1 444 55</div>
+</footer>
+
+<div class="co" id="co" onclick="toggleCart()"></div>
+<div class="cs" id="cs">
+  <div class="ch"><h3 class="ct">Tu carrito</h3><button class="cc" onclick="toggleCart()">✕</button></div>
+  <div class="ci" id="ci"></div>
+  <div class="cf" id="cf" style="display:none;">
+    <div class="cst"><span class="csl">Total</span><span class="csp" id="ctot">$ —</span></div>
+    <button class="bck" onclick="checkout()">Confirmar pedido</button>
+    <p class="mpn">🔒 Tu pedido queda registrado y nos contactamos</p>
+  </div>
+</div>
+
+<div class="mo" id="mo" onclick="mcClick(event)">
+  <div class="mm" id="mm">
+    <div class="miw" id="mi"></div>
+    <div class="mc">
+      <button class="mcs" onclick="closeModal()">✕</button>
+      <p class="mbr" id="mbr"></p><h2 class="mnm" id="mnm"></h2><p class="mfm" id="mfm"></p>
+      <div class="mbd" id="mbd"></div><div class="mdv"></div>
+      <div id="mnt"></div>
+      <div class="mpr"><div class="mprc" id="mpr"></div><button class="bma" id="mab">+ Agregar</button></div>
+    </div>
+  </div>
+</div>
+
+<a href="tel:3425144455" class="wabtn" title="Llamar">📞</a>
+<div class="toast" id="toast"><span class="toi">✓</span><span id="toastMsg"></span></div>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+import { getFirestore, collection, doc, setDoc, getDocs, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+const app = initializeApp({apiKey:"AIzaSyCadIb_MCEum2Fe1wiEcXr0lIhyjoTN2-U",authDomain:"eme-aromas.firebaseapp.com",projectId:"eme-aromas",storageBucket:"eme-aromas.firebasestorage.app",messagingSenderId:"529084170206",appId:"1:529084170206:web:c1a59799951c641aae674f"});
+const db = getFirestore(app);
+
+const BASE = [
+  {id:"1",name:"Fakhar Rose",brand:"Lattafa",gender:"Mujer",family:"Floral",year:"2022",img:"https://i.imgur.com/RJaHXaW.jpg",S:["frutas","azucena","granada","aldehídos"],C:["nardos","jazmín","gardenia","ylang-ylang","rosa","peonía"],F:["vainilla","almizcle blanco","sándalo","ambroxan"]},
+  {id:"2",name:"Al Qiam Silver",brand:"Lattafa Pride",gender:"Unisex",family:"Amaderada",year:"2022",img:"https://i.imgur.com/aZ457CG.jpg",S:["toronja","jengibre"],C:["ambroxan","sándalo"],F:["almizcle","vetiver"]},
+  {id:"3",name:"Emeer",brand:"Lattafa",gender:"Unisex",family:"Amaderada",year:"2024",img:"https://i.imgur.com/KMSET2A.jpg",S:["limón","bergamota","esclarea"],C:["té blanco","sándalo","cardamomo"],F:["ámbar gris","cedro","cachemira","pachulí"]},
+  {id:"4",name:"Afiona Ideal",brand:"Afiona",gender:"Mujer",family:"Floral",year:"",img:"https://i.imgur.com/mxZh4WX.jpg",S:["caléndula","ámbar mineral","azafrán","pera"],C:["cedro","jazmín","caramelo","rosa"],F:["ámbar","madera","almizcle"]},
+  {id:"5",name:"Her Confession",brand:"Lattafa",gender:"Mujer",family:"Floral",year:"2024",img:"https://i.imgur.com/BwpZJUa.jpg",S:["místico","canela"],C:["nardos","jazmín","incienso","mahonial"],F:["vainilla","haba tonka","almizcle"]},
+  {id:"6",name:"Anfar Rosella",brand:"Florenca di Anfar",gender:"Mujer",family:"Floral",year:"2024",img:"https://i.imgur.com/VirVuuG.jpg",S:["ruibarbo","lichi","bergamota"],C:["rosa turca","peonía","almizcle","vainilla"],F:["incienso","cedro","vetiver","cachemira"]},
+  {id:"7",name:"Asad Black",brand:"Lattafa",gender:"Hombre",family:"Oriental",year:"2021",img:"https://i.imgur.com/KVNryBj.jpg",S:["pimienta negra","tabaco","piña"],C:["pachulí","café","iris"],F:["vainilla","ámbar","madera seca","benjuí"]},
+  {id:"8",name:"Atheeri",brand:"Lattafa",gender:"Mujer",family:"Oriental",year:"2025",img:"https://i.imgur.com/1AZlqx0.jpg",S:["flor de pasionaria","gota del rocío"],C:["orquídea","jazmín"],F:["amberwood","vainilla"]},
+  {id:"9",name:"His Confession",brand:"Lattafa",gender:"Hombre",family:"Amaderada",year:"2024",img:"https://i.imgur.com/HTHfaS4.jpg",S:["canela","lavanda","mandarina"],C:["iris","benjuí","ciprés","mahonial"],F:["vainilla","haba tonka","ámbar","cedro","incienso","pachulí"]},
+  {id:"10",name:"Al Haramain Miracle Dubai",brand:"Al Haramain",gender:"Unisex",family:"Floral",year:"2024",img:"https://i.imgur.com/0904shN.jpg",S:["rosa de Bulgaria","lichi","pachulí"],C:["rosa","flores blancas","sándalo"],F:["cedro","almizcle","ámbar"]},
+  {id:"11",name:"Confidential Platinum",brand:"Lattafa",gender:"Hombre",family:"Amaderada",year:"2022",img:"https://i.imgur.com/wdcWIjs.jpg",S:["cítricos","bergamota","ciprés","pimienta negra"],C:["notas marinas","notas amaderadas"],F:["ámbar gris","almizcle","musgo"]},
+  {id:"12",name:"Eclaire",brand:"Lattafa",gender:"Mujer",family:"Gourmand",year:"2024",img:"https://i.imgur.com/uMcO0Kj.jpg",S:["caramelo","leche","azúcar"],C:["miel","flores blancas"],F:["vainilla","praliné","almizcle"]},
+  {id:"13",name:"Amethyst",brand:"Lattafa",gender:"Unisex",family:"Oriental",year:"2021",img:"https://i.imgur.com/jotl8rp.jpg",S:["pimienta rosa","bergamota"],C:["rosa turca","rosa de Bulgaria","jazmín"],F:["madera de oud","ámbar","vainilla"]},
+  {id:"14",name:"Club de Nuite Iconic",brand:"Armaf",gender:"Hombre",family:"Amaderada",year:"2022",img:"https://i.imgur.com/7WiLI2s.jpg",S:["toronja","limón","menta","pimienta rosa"],C:["jengibre","melón","jazmín","nuez moscada"],F:["notas amaderadas","incienso","sándalo","ámbar","cedro"]},
+  {id:"15",name:"Ana Abhiyen Coral",brand:"Lattafa",gender:"Unisex",family:"Floral",year:"2025",img:"https://i.imgur.com/H5xpChs.jpg",S:["sandía","durazno","naranja"],C:["coco","flores blancas"],F:["vainilla","almizcle","ámbar"]},
+  {id:"16",name:"Club de Nuite Lionheart",brand:"Armaf",gender:"Hombre",family:"Amaderada",year:"2022",img:"https://i.imgur.com/gDdlh8Y.jpg",S:["cítricos","especias"],C:["jazmín","notas amaderadas"],F:["ámbar","almizcle","cedro"]},
+  {id:"17",name:"Emaan",brand:"Lattafa",gender:"Mujer",family:"Chipre",year:"2022",img:"https://i.imgur.com/ncMt3qo.jpg",S:["flor de azahar","bergamota","grosellas negras"],C:["nardos","jazmín","caléndula"],F:["vainilla","almizcle","pachulí","cedro"]},
+  {id:"18",name:"Eter Arabian Sky",brand:"Armaf",gender:"Unisex",family:"Amaderada",year:"2024",img:"https://i.imgur.com/v8K1rY8.jpg",S:["naranja","piña","pimienta","limón","bergamota"],C:["lavanda","geranio","caramelo","ylang-ylang"],F:["vetiver","almizcle","cedro","ámbar","pachulí"]},
+  {id:"19",name:"Hawas For Him",brand:"Rasasi",gender:"Hombre",family:"Acuática",year:"2015",img:"https://i.imgur.com/kiPrxOz.jpg",S:["manzana","bergamota","limón","canela"],C:["notas acuosas","ciruela","flor de azahar","cardamomo"],F:["ámbar gris","almizcle","pachulí"]},
+  {id:"20",name:"Odissey Tyrant",brand:"Armaf",gender:"Hombre",family:"Amaderada",year:"2023",img:"https://i.imgur.com/mszXLao.jpg",S:["toronja","cítricos"],C:["pimienta","geranio","lavanda","elemí"],F:["ambroxan","notas amaderadas","vetiver","cedro"]},
+  {id:"21",name:"Atlantis de Asdaaf",brand:"Asdaaf",gender:"Unisex",family:"Acuática",year:"2023",img:"https://i.imgur.com/JY65uyv.jpg",S:["limón","bergamota"],C:["sal de mar","jacinto azul"],F:["almizcle","cedro"]},
+  {id:"22",name:"Al Quiam Gold",brand:"Lattafa Pride",gender:"Unisex",family:"Amaderada",year:"2022",img:"https://i.imgur.com/2uBuWqG.jpg",S:["frambuesa","azafrán"],C:["cuero","pachulí"],F:["madera de oud","ámbar","benjuí","vetiver"]},
+  {id:"23",name:"Tamima",brand:"Lattafa",gender:"Unisex",family:"Amaderada",year:"2024",img:"https://i.imgur.com/icmYSPz.jpg",S:["kiwi","grosella roja","ruibarbo","pimienta rosa"],C:["sandía","ciclamen","jazmín"],F:["almizcle","cedro","sándalo"]},
+  {id:"24",name:"Club de Nuite Untold",brand:"Armaf",gender:"Unisex",family:"Oriental",year:"2022",img:"https://i.imgur.com/1y8kYnu.jpg",S:["azafrán","jazmín"],C:["amberwood","ámbar gris"],F:["resina de abeto","cedro"]},
+  {id:"25",name:"Bade'e Al Oud For Glory Black",brand:"Lattafa",gender:"Unisex",family:"Amaderada",year:"2020",img:"https://i.imgur.com/v9acAzW.jpg",S:["azafrán","nuez moscada","lavanda"],C:["madera de oud","pachulí"],F:["madera de oud","pachulí","almizcle"]},
+  {id:"26",name:"Musuman White Intense",brand:"Lattafa",gender:"Unisex",family:"Oriental",year:"2023",img:"https://i.imgur.com/1igNftA.jpg",S:["especias","bergamota","naranja"],C:["coco","ylang-ylang","ambroxan"],F:["sándalo","almizcle","benjuí"]},
+  {id:"27",name:"Al Haramain Amber Oud",brand:"Al Haramain",gender:"Unisex",family:"Oriental",year:"2024",img:"https://i.imgur.com/Oxwv2T2.jpg",S:["bergamota","notas verdes"],C:["melón","piña","ámbar"],F:["vainilla","almizcle","notas amaderadas"]},
+  {id:"28",name:"9 AM Pink",brand:"Afnan",gender:"Mujer",family:"Oriental",year:"2022",img:"https://i.imgur.com/VXwY4oT.jpg",S:["bergamota","toronja","mandarina"],C:["frambuesa","grosellas negras"],F:["almizcle","ámbar","naranja"]},
+  {id:"29",name:"Mahir Black Edition",brand:"Lattafa",gender:"Unisex",family:"Oriental",year:"2019",img:"https://i.imgur.com/gKn23EK.jpg",S:["pimienta negra","pimienta rosa","azafrán"],C:["petróleo de cade","ládano","ruibarbo"],F:["cuero","cedro","madera de gaiac","pachulí","almizcle"]},
+  {id:"30",name:"Philos Pura",brand:"Lattafa",gender:"Unisex",family:"Aromática",year:"2022",img:"https://i.imgur.com/vHB7aXt.jpg",S:["naranja","bergamota","limón"],C:["frutas"],F:["vainilla de Madagascar","almizcle blanco","ámbar"]},
+  {id:"31",name:"Pachuli Nro 7",brand:"Emire",gender:"Unisex",family:"Chipre",year:"",img:"https://i.imgur.com/KJlXMPB.jpg",S:["cacao","pachulí"],C:["lirios","rosas búlgaras"],F:["ante","cuero"]},
+  {id:"32",name:"9 AM Dive (Set)",brand:"Afnan",gender:"Unisex",family:"Acuática",year:"2022",img:"https://i.imgur.com/17Arjeh.jpg",S:["limón","menta","grosellas negras","pimienta rosa"],C:["manzana","cedro","incienso"],F:["jengibre","sándalo","pachulí","jazmín"]},
+  {id:"33",name:"Eternal Oud",brand:"Lattafa Pride",gender:"Unisex",family:"Oriental",year:"2022",img:"https://i.imgur.com/guEXG1d.jpg",S:["ciruela","toronja"],C:["heliotropo","orquídea"],F:["benjuí","ámbar","vainilla","haba tonka","madera de oud"]},
+  {id:"34",name:"Emeer (Extrait)",brand:"Lattafa",gender:"Unisex",family:"Amaderada",year:"2024",img:"https://i.imgur.com/uskslYo.jpg",S:["limón","bergamota","esclarea"],C:["té blanco","sándalo","cardamomo"],F:["ámbar gris","cedro","cachemira","pachulí"]},
+  {id:"35",name:"Her Confession (Box)",brand:"Lattafa",gender:"Mujer",family:"Floral",year:"2024",img:"https://i.imgur.com/P40FtbF.jpg",S:["místico","canela"],C:["nardos","jazmín","incienso"],F:["vainilla","haba tonka","almizcle"]},
+  {id:"36",name:"Miss Armaf Attitude",brand:"Armaf",gender:"Mujer",family:"Floral",year:"2023",img:"https://i.imgur.com/LhMp4Ay.jpg",S:["almendra","rosa","jazmín","bergamota"],C:["nardos","flor de azahar","café","narciso"],F:["vainilla","haba tonka","ámbar","sándalo","cedro"]},
+  {id:"37",name:"His Confession (Box)",brand:"Lattafa",gender:"Hombre",family:"Amaderada",year:"2024",img:"https://i.imgur.com/cyJBvTR.jpg",S:["canela","lavanda","mandarina"],C:["iris","benjuí","ciprés"],F:["vainilla","haba tonka","ámbar","cedro","incienso","pachulí"]},
+  {id:"38",name:"Odyssey Aoud",brand:"Lattafa",gender:"Hombre",family:"Amaderada",year:"2023",img:"https://i.imgur.com/bgX4n9y.jpg",S:["nuez moscada","azafrán","lavanda"],C:["madera de oud","notas amaderadas"],F:["ambroxan","almizcle","pachulí"]},
+  {id:"39",name:"Baroque Rouge",brand:"Maison Alhambra",gender:"Unisex",family:"Oriental",year:"2021",img:"https://i.imgur.com/TulOcZp.jpg",S:["azafrán","pera","mandarina"],C:["jazmín","ylang-ylang","azucena"],F:["ámbar","madera de cachemira","almizcle"]},
+  {id:"40",name:"Tharwah Gold",brand:"Lattafa Pride",gender:"Mujer",family:"Oriental",year:"2022",img:"https://i.imgur.com/doX5id6.jpg",S:["lavanda","bergamota"],C:["flor de azahar","jazmín egipcio"],F:["vainilla","ámbar","vetiver"]},
+  {id:"41",name:"Mayar Cherry Intense",brand:"Lattafa",gender:"Unisex",family:"Oriental",year:"2024",img:"https://i.imgur.com/c0wuFlU.jpg",S:["fresa","bergamota"],C:["cherry jam","cacao"],F:["vainilla","ámbar","pachulí"]},
+  {id:"42",name:"Fakhar Gold",brand:"Lattafa",gender:"Hombre",family:"Oriental",year:"2023",img:"https://i.imgur.com/P5wGJf0.jpg",S:["toronja","cardamomo","pimienta rosa"],C:["nardos","notas solares","abrótano"],F:["ámbar","cuero","cachemira","ládano"]},
+  {id:"43",name:"Petra",brand:"Lattafa",gender:"Unisex",family:"Gourmand",year:"2025",img:"https://i.imgur.com/8LcWpAy.jpg",S:["ron","ciruela"],C:["nardos","coco"],F:["vainilla","almizcle","praliné"]},
+  {id:"44",name:"Noble Blush",brand:"Lattafa",gender:"Mujer",family:"Gourmand",year:"2024",img:"https://i.imgur.com/4TryNMC.jpg",S:["rose milk"],C:["merengue","almendra"],F:["vainilla","almizcle","sándalo"]},
+  {id:"45",name:"Veneno",brand:"French Avenue",gender:"Unisex",family:"Aromática",year:"2025",img:"https://i.imgur.com/jcMzPBY.jpg",S:["manzana","humo","canela"],C:["tabaco","musgo"],F:["vainilla bourbon","orcanox"]},
+  {id:"46",name:"Pink Velvet",brand:"Maison Alhambra",gender:"Mujer",family:"Chipre",year:"2022",img:"https://i.imgur.com/MMziVNu.jpg",S:["rosa de Bulgaria","rosa de mayo"],C:["rosa turca","azafrán"],F:["pachulí","haba tonka","vainilla"]},
+  {id:"47",name:"Tiramisu Coco",brand:"Zimaya",gender:"Unisex",family:"Gourmand",year:"2024",img:"https://i.imgur.com/An8GqUs.jpg",S:["amaretto","café"],C:["helado","bizcocho","vainilla"],F:["vainilla","azúcar moreno","ámbar"]},
+  {id:"48",name:"Q'aa Ed",brand:"Lattafa",gender:"Unisex",family:"Oriental",year:"2018",img:"https://i.imgur.com/0sSLYj5.jpg",S:["canela","cardamomo","bergamota"],C:["azafrán","sándalo","cedro","clavel"],F:["madera de oud","vainilla","cuero","ámbar"]},
+  {id:"49",name:"Opulent Blue Oud",brand:"Lattafa",gender:"Unisex",family:"Amaderada",year:"2018",img:"https://i.imgur.com/p2wBQir.jpg",S:["madera de oud","pimienta negra","manzana","bergamota"],C:["frutas","almizcle","azafrán","jazmín"],F:["ámbar gris","madera de gaiac","sándalo"]},
+  {id:"50",name:"Andaleeb",brand:"Asdaaf",gender:"Unisex",family:"Chipre",year:"",img:"https://i.imgur.com/MoWieSY.jpg",S:["naranja","bergamota","mandarina"],C:["jazmín","rosa"],F:["pachulí","vetiver","sándalo"]},
+  {id:"51",name:"Minya",brand:"Paris Corner",gender:"Unisex",family:"Oriental",year:"2024",img:"https://i.imgur.com/E7NFJP8.jpg",S:["almendra","pistacho"],C:["heliotropo","jazmín"],F:["vainilla","salted caramel","sándalo"]},
+];
+
+let products=[...BASE], prices={};
+let cart=JSON.parse(localStorage.getItem('ec3')||'[]');
+
+async function init(){
+  try{
+    const ps=await getDocs(collection(db,'prices'));
+    ps.forEach(d=>{prices[d.id]=d.data().price;});
+    const ex=await getDocs(collection(db,'products'));
+    ex.forEach(d=>{const dat=d.data();if(!products.find(p=>p.id===d.id))products.push({...dat,id:d.id});});
+    document.getElementById('heroCount').textContent=products.length+'+';
+  }catch(e){console.log('FB init:',e);}
+  render(products);
+  renderAdmin();
+}
+init();
+
+function render(list){
+  const g=document.getElementById('pg');
+  g.innerHTML='';
+  document.getElementById('rNum').textContent=list.length;
+  if(!list.length){g.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--text-light);font-family:\'Cormorant Garamond\',serif;font-size:18px;font-style:italic;">No se encontraron fragancias</div>';return;}
+  list.forEach(p=>{
+    const pr=prices[p.id];
+    const d=document.createElement('div');
+    d.className='pc';
+    d.innerHTML=`<div class="piw"><img src="${p.img||''}" alt="${p.name}" loading="lazy" onerror="this.style.opacity='0.2'">
+      <span class="pgb">${p.gender}</span>${p.year?`<span class="pyb">${p.year}`:''}</span>
+      <div class="po"><button class="bqa" onclick="addCart('${p.id}',event)">+ Agregar</button><button class="bda" onclick="openMod('${p.id}',event)">Ver detalles</button></div>
+      </div>
+      <div class="pinfo">
+        <p class="pbr">${p.brand}</p>
+        <h3 class="pnm">${p.name}</h3>
+        <p class="pfm">${p.family}</p>
+        <div class="pnp">${(p.S||[]).slice(0,3).map(n=>`<span class="nt">${n}</span>`).join('')}</div>
+        <div class="pft">
+          <div class="ppr">${pr?'$'+Number(pr).toLocaleString('es-AR'):`<span class="pph">Consultar</span>`}</div>
+          <button class="bac" onclick="addCart('${p.id}',event)">+ Carrito</button>
+        </div>
+      </div>`;
+    g.appendChild(d);
+  });
+}
+
+window.applyFilters=()=>{
+  const g=document.getElementById('fG').value, f=document.getElementById('fF').value,
+    m=document.getElementById('fM').value, n=document.getElementById('fN').value.toLowerCase(),
+    s=document.getElementById('fS').value.toLowerCase();
+  render(products.filter(p=>{
+    if(g&&p.gender!==g)return false;
+    if(f&&!p.family.includes(f))return false;
+    if(m&&p.brand!==m)return false;
+    if(n){const all=[...(p.S||[]),...(p.C||[]),...(p.F||[])].join(' ').toLowerCase();if(!all.includes(n))return false;}
+    if(s&&!p.name.toLowerCase().includes(s)&&!p.brand.toLowerCase().includes(s))return false;
+    return true;
+  }));
+}
+window.clearFilters=()=>{['fG','fF','fM','fN'].forEach(i=>document.getElementById(i).value='');document.getElementById('fS').value='';render(products);}
+window.setF=(id,v)=>{document.getElementById(id).value=v;applyFilters();document.getElementById('catalogo').scrollIntoView({behavior:'smooth'});}
+
+window.addCart=(id,e)=>{
+  if(e)e.stopPropagation();
+  const p=products.find(x=>x.id==id);if(!p)return;
+  const ex=cart.find(x=>x.id==id);
+  if(ex)ex.qty++;else cart.push({id,qty:1});
+  localStorage.setItem('ec3',JSON.stringify(cart));
+  updateCart();showToast(`${p.name} agregado ✓`);
+}
+window.chQty=(id,d)=>{
+  const it=cart.find(x=>x.id==id);if(!it)return;
+  it.qty+=d;if(it.qty<=0)cart=cart.filter(x=>x.id!=id);
+  localStorage.setItem('ec3',JSON.stringify(cart));updateCart();
+}
+window.rmCart=(id)=>{cart=cart.filter(x=>x.id!=id);localStorage.setItem('ec3',JSON.stringify(cart));updateCart();}
+
+function updateCart(){
+  const tot=cart.reduce((s,x)=>s+x.qty,0);
+  document.getElementById('cartBadge').textContent=tot;
+  const ci=document.getElementById('ci'),cf=document.getElementById('cf');
+  if(!cart.length){ci.innerHTML=`<div class="cem"><div class="cem-i">🛒</div><p class="cem-t">Tu carrito está vacío</p></div>`;cf.style.display='none';return;}
+  cf.style.display='block';ci.innerHTML='';
+  let total=0,hasAll=true;
+  cart.forEach(item=>{
+    const p=products.find(x=>x.id==item.id);if(!p)return;
+    const pr=prices[p.id];if(!pr)hasAll=false;
+    if(pr)total+=pr*item.qty;
+    const d=document.createElement('div');d.className='cit';
+    d.innerHTML=`<img class="cii" src="${p.img||''}" alt="${p.name}" onerror="this.style.opacity='0.2'">
+      <div class="cin">
+        <div class="cinm">${p.name}</div><div class="cibr">${p.brand}</div>
+        <div class="cipr">${pr?'$'+(pr*item.qty).toLocaleString('es-AR'):'A confirmar'}</div>
+        <div class="cictl">
+          <button class="qb" onclick="chQty('${item.id}',-1)">−</button>
+          <span class="qn">${item.qty}</span>
+          <button class="qb" onclick="chQty('${item.id}',1)">+</button>
+          <button class="crm" onclick="rmCart('${item.id}')">🗑</button>
+        </div>
+      </div>`;
+    ci.appendChild(d);
+  });
+  document.getElementById('ctot').textContent=hasAll&&total>0?'$ '+total.toLocaleString('es-AR'):'A confirmar';
+}
+updateCart();
+
+window.toggleCart=()=>{document.getElementById('cs').classList.toggle('open');document.getElementById('co').classList.toggle('open');}
+
+window.checkout=async()=>{
+  if(!cart.length)return;
+  const items=cart.map(it=>{const p=products.find(x=>x.id==it.id);const pr=prices[p?.id]||0;return{name:p?.name||'Producto',qty:it.qty,price:pr,subtotal:pr*it.qty};});
+  const total=items.reduce((s,x)=>s+x.subtotal,0);
+  try{
+    await addDoc(collection(db,'orders'),{items,total,status:'pendiente',createdAt:serverTimestamp()});
+    showToast('¡Pedido registrado! Nos contactamos pronto 🎉');
+    cart=[];localStorage.setItem('ec3','[]');updateCart();toggleCart();
+  }catch(e){showToast('Error al registrar. Intentá de nuevo.');}
+}
+
+window.openMod=(id,e)=>{
+  if(e)e.stopPropagation();
+  const p=products.find(x=>x.id==id);if(!p)return;
+  document.getElementById('mbr').textContent=p.brand;
+  document.getElementById('mnm').textContent=p.name;
+  document.getElementById('mfm').textContent=p.family;
+  document.getElementById('mbd').innerHTML=`<span class="mbdg">${p.gender}</span>${p.year?`<span class="mbdg">${p.year}</span>`:''}`;
+  document.getElementById('mi').innerHTML=`<img src="${p.img||''}" alt="${p.name}" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.opacity='0.2'">`;
+  const mk=(lbl,arr)=>arr&&arr.length?`<div class="mns"><div class="mnsl">${lbl}</div><div class="mnsl2">${arr.map(n=>`<span class="mnt">${n}</span>`).join('')}</div></div>`:'';
+  document.getElementById('mnt').innerHTML=mk('Notas de Salida',p.S)+mk('Notas de Corazón',p.C)+mk('Notas de Fondo',p.F);
+  const pr=prices[p.id];
+  document.getElementById('mpr').textContent=pr?'$ '+Number(pr).toLocaleString('es-AR'):'Consultar precio';
+  document.getElementById('mab').onclick=()=>{addCart(id);closeModal();};
+  document.getElementById('mo').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+window.closeModal=()=>{document.getElementById('mo').classList.remove('open');document.body.style.overflow='';}
+window.mcClick=(e)=>{if(e.target===document.getElementById('mo'))closeModal();}
+
+window.doLogin=()=>{
+  const pw=document.getElementById('admPw').value;
+  const sp=localStorage.getItem('admPw')||'eme2024';
+  if(pw===sp){document.getElementById('admLogin').style.display='none';document.getElementById('admPanel').classList.add('active');renderAdmin();loadOrders();}
+  else{document.getElementById('admPw').style.borderColor='var(--red)';setTimeout(()=>document.getElementById('admPw').style.borderColor='rgba(201,168,76,0.3)',2000);}
+}
+window.doLogout=()=>{document.getElementById('admLogin').style.display='block';document.getElementById('admPanel').classList.remove('active');document.getElementById('admPw').value='';}
+window.swTab=(t,btn)=>{
+  document.querySelectorAll('.adm-tab').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.adm-tc').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');document.getElementById('tab-'+t).classList.add('active');
+  if(t==='pedidos')loadOrders();
+}
+
+function renderAdmin(){
+  const g=document.getElementById('ag');if(!g)return;g.innerHTML='';
+  products.forEach(p=>{
+    const pr=prices[p.id]||'';
+    const d=document.createElement('div');d.className='acard';
+    d.innerHTML=`<div class="acn">${p.name}</div><div class="acm">${p.brand} · ${p.gender}</div>
+      <div class="apr"><input type="number" class="api" id="pr_${p.id}" value="${pr}" placeholder="$ ARS"><button class="btn-pri" onclick="savePr('${p.id}')" style="padding:8px 14px;font-size:8px;">Guardar</button></div>
+      <span class="aok" id="ok_${p.id}">✓ Guardado</span>`;
+    g.appendChild(d);
+  });
+}
+
+window.savePr=async(id)=>{
+  const v=parseFloat(document.getElementById('pr_'+id).value);
+  if(isNaN(v)||v<=0)return;
+  prices[id]=v;
+  try{await setDoc(doc(db,'prices',String(id)),{price:v});}catch(e){console.log(e);}
+  const ok=document.getElementById('ok_'+id);ok.style.display='block';
+  setTimeout(()=>ok.style.display='none',2000);
+  render(products);
+}
+
+window.loadOrders=async()=>{
+  const c=document.getElementById('ordCont');
+  c.innerHTML='<p style="color:rgba(255,255,255,0.4);font-size:11px;">Cargando...</p>';
+  try{
+    const snap=await getDocs(collection(db,'orders'));
+    if(snap.empty){c.innerHTML=`<div class="ord-empty"><div class="ord-empty-i">📦</div><p class="ord-empty-t">No hay pedidos todavía</p></div>`;return;}
+    const ords=[];snap.forEach(d=>ords.push({id:d.id,...d.data()}));
+    ords.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
+    c.innerHTML='';
+    ords.forEach(o=>{
+      const date=o.createdAt?new Date(o.createdAt.seconds*1000).toLocaleString('es-AR'):'Sin fecha';
+      const its=(o.items||[]).map(i=>`${i.qty}x ${i.name}`).join(', ');
+      const d=document.createElement('div');d.className='ocard';
+      d.innerHTML=`<div class="ocard-h"><div><div class="oid">#${o.id.slice(-6).toUpperCase()}</div><div class="odate">${date}</div></div><span class="ost ${o.status||'pendiente'}">${o.status||'pendiente'}</span></div>
+        <div class="oitems">🛒 ${its||'Sin productos'}</div>
+        <div class="ototal">${o.total>0?'$ '+Number(o.total).toLocaleString('es-AR'):'A confirmar'}</div>`;
+      c.appendChild(d);
+    });
+  }catch(e){c.innerHTML='<p style="color:rgba(255,255,255,0.4);font-size:11px;">Error cargando pedidos.</p>';}
+}
+
+window.addProduct=async()=>{
+  const n=document.getElementById('nN').value.trim(),b=document.getElementById('nB').value.trim();
+  if(!n||!b){showToast('Completá nombre y marca');return;}
+  const nid='c_'+Date.now();
+  const np={id:nid,name:n,brand:b,year:document.getElementById('nY').value.trim(),gender:document.getElementById('nGn').value,family:document.getElementById('nFm').value,img:document.getElementById('nI').value.trim(),S:document.getElementById('nNS').value.split(',').map(s=>s.trim()).filter(Boolean),C:document.getElementById('nNC').value.split(',').map(s=>s.trim()).filter(Boolean),F:document.getElementById('nNF').value.split(',').map(s=>s.trim()).filter(Boolean)};
+  const pv=parseFloat(document.getElementById('nP').value);
+  try{
+    await setDoc(doc(db,'products',nid),np);
+    if(!isNaN(pv)&&pv>0){await setDoc(doc(db,'prices',nid),{price:pv});prices[nid]=pv;}
+  }catch(e){console.log(e);}
+  products.push(np);
+  render(products);renderAdmin();
+  document.getElementById('heroCount').textContent=products.length+'+';
+  ['nN','nB','nY','nI','nNS','nNC','nNF','nP'].forEach(i=>document.getElementById(i).value='');
+  const ok=document.getElementById('addOk');ok.style.display='block';
+  setTimeout(()=>ok.style.display='none',3000);
+  showToast(`${n} agregado al catálogo ✓`);
+}
+
+window.showToast=(msg)=>{const t=document.getElementById('toast');document.getElementById('toastMsg').textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500);}
+window.addEventListener('scroll',()=>{document.getElementById('nav').style.padding=window.scrollY>40?'8px 16px':'12px 16px';});
+</script>
+</body>
+</html>
