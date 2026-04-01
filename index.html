@@ -6,67 +6,67 @@
 <title>Eme Aromas · Perfumes Árabes</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--gold:#c9a84c;--gold-light:#e8d5a3;--gold-dark:#8a6f2e;--cream:#faf6f0;--dark:#0e0b08;--dark2:#1a1410;--dark3:#2a2018;--text:#3a2e20;--text-light:#7a6a55;--teal:#4ab3b0;--white:#ffffff;--green:#27ae60;--red:#e74c3c;}
+:root{--gold:#b8960c;--gold-light:#d4b84a;--gold-dark:#8a6f2e;--cream:#ffffff;--dark:#0a0a0a;--dark2:#111111;--dark3:#1a1a1a;--text:#111111;--text-light:#666666;--teal:#4ab3b0;--white:#ffffff;--green:#27ae60;--red:#e74c3c;}
 *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;font-size:14px;}
+body{font-family:'Montserrat',sans-serif;background:#ffffff;color:#111111;overflow-x:hidden;font-size:14px;}
 ::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:var(--dark2);}::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(14,11,8,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);transition:padding 0.3s;}
 .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
-.nav-logo-circle{width:36px;height:36px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#e8f8f7,var(--teal));display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.nav-logo-eme{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--white);line-height:1;}
-.nav-logo-sub{font-size:7px;font-weight:600;color:var(--gold);letter-spacing:3px;text-transform:uppercase;}
+.nav-logo-circle{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a1a1a,#333333);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.nav-logo-eme{font-family:'Cormorant Garamond',serif;font-size:18px;color:#ffffff;line-height:1;}
+.nav-logo-sub{font-size:7px;font-weight:600;color:#d4b84a;letter-spacing:3px;text-transform:uppercase;}
 .nav-links{display:none;}
 @media(min-width:768px){nav{padding:14px 40px;}.nav-links{display:flex;gap:24px;}.nav-links a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}.nav-links a:hover{color:var(--gold);}}
 .nav-cart{position:relative;cursor:pointer;color:var(--white);font-size:18px;background:none;border:none;}
-.cart-badge{position:absolute;top:-6px;right:-6px;width:16px;height:16px;border-radius:50%;background:var(--gold);color:var(--dark);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
-.hero{min-height:100vh;background:linear-gradient(135deg,var(--dark) 0%,var(--dark2) 40%,#1f1508 70%,#2a1a05 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:90px 16px 50px;text-align:center;}
-.hero-bg{position:absolute;inset:0;opacity:0.04;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:22px 22px;}
+.cart-badge{position:absolute;top:-6px;right:-6px;width:16px;height:16px;border-radius:50%;background:#b8960c;color:var(--dark);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.hero{min-height:100vh;background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 50%,#0a0a0a 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:90px 16px 50px;text-align:center;}
+.hero-bg{position:absolute;inset:0;opacity:0.06;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:22px 22px;}
 .hero-glow{position:absolute;top:20%;left:50%;transform:translateX(-50%);width:min(450px,85vw);height:min(450px,85vw);border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 70%);pointer-events:none;}
 .hero-content{position:relative;z-index:2;max-width:650px;width:100%;}
-.hero-sub{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
+.hero-sub{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#d4b84a;margin-bottom:18px;}
 .hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,12vw,96px);font-weight:300;color:var(--white);line-height:0.9;margin-bottom:8px;}
 .hero-title em{font-style:italic;color:var(--gold);}
 .hero-tag{font-family:'Cormorant Garamond',serif;font-size:clamp(15px,4vw,21px);font-weight:300;font-style:italic;color:rgba(255,255,255,0.45);margin-bottom:28px;}
 .hero-div{display:flex;align-items:center;gap:10px;justify-content:center;margin-bottom:28px;}
-.hdl{flex:1;max-width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));}
-.hdr{background:linear-gradient(90deg,var(--gold),transparent);}
-.hdm{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
-.hero-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;}
-.hero-cta:hover{background:var(--gold);color:var(--dark);}
+.hdl{flex:1;max-width:70px;height:1px;background:linear-gradient(90deg,transparent,#b8960c);}
+.hdr{background:linear-gradient(90deg,#b8960c,transparent);}
+.hdm{width:6px;height:6px;background:#b8960c;transform:rotate(45deg);}
+.hero-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:transparent;border:1px solid #b8960c;color:#b8960c;font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;text-decoration:none;}
+.hero-cta:hover{background:#b8960c;color:#ffffff;}
 .hero-stats{display:flex;gap:24px;justify-content:center;margin-top:40px;flex-wrap:wrap;}
-.hs{text-align:center;}.hs-n{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--gold);line-height:1;}
+.hs{text-align:center;}.hs-n{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:#d4b84a;line-height:1;}
 .hs-l{font-size:7px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:2px;}
-.catalog-section{padding:50px 14px;}
+.catalog-section{padding:50px 14px;background:#ffffff;}
 @media(min-width:768px){.catalog-section{padding:70px 40px;}}
 .sh{text-align:center;margin-bottom:32px;}
-.sl{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-.st{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,6vw,44px);font-weight:300;color:var(--text);}
+.sl{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#b8960c;margin-bottom:10px;}
+.st{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,6vw,44px);font-weight:300;color:#111111;}
 .st em{font-style:italic;}
-.fw{background:var(--dark2);padding:18px 14px;margin-bottom:24px;border-top:1px solid rgba(201,168,76,0.2);border-bottom:1px solid rgba(201,168,76,0.2);}
+.fw{background:#f5f5f5;padding:18px 14px;margin-bottom:24px;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;}
 @media(min-width:768px){.fw{padding:24px 40px;}}
 .fg{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
 @media(min-width:600px){.fg{grid-template-columns:repeat(3,1fr);gap:12px;}}
 @media(min-width:900px){.fg{grid-template-columns:repeat(5,1fr) auto;align-items:end;gap:14px;}}
 .fgrp{display:flex;flex-direction:column;gap:5px;}
-.flbl{font-size:7px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);}
-.fsel,.finp{background:rgba(255,255,255,0.05);border:1px solid rgba(201,168,76,0.3);color:var(--white);padding:8px 10px;font-family:'Montserrat',sans-serif;font-size:11px;cursor:pointer;outline:none;width:100%;appearance:none;transition:border-color 0.3s;}
-.fsel:focus,.finp:focus{border-color:var(--gold);}
-.fsel option{background:var(--dark2);}
+.flbl{font-size:7px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#555555;}
+.fsel,.finp{background:#ffffff;border:1px solid #cccccc;color:#111111;padding:8px 10px;font-family:'Montserrat',sans-serif;font-size:11px;cursor:pointer;outline:none;width:100%;appearance:none;transition:border-color 0.3s;}
+.fsel:focus,.finp:focus{border-color:#b8960c;}
+.fsel option{background:#ffffff;color:#111111;}
 .fsearch{grid-column:1/-1;}
 @media(min-width:900px){.fsearch{grid-column:auto;}}
-.finp-w{position:relative;}.finp-w .finp{padding-right:32px;}
+.finp-w{position:relative;}.finp-w .finp{padding-right:32px;background:#ffffff;color:#111111;}
 .sico{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:12px;pointer-events:none;}
-.fclr{padding:8px 16px;background:transparent;border:1px solid rgba(201,168,76,0.3);color:rgba(255,255,255,0.5);font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;white-space:nowrap;grid-column:1/-1;}
+.fclr{padding:8px 16px;background:transparent;border:1px solid #cccccc;color:#666666;font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;white-space:nowrap;grid-column:1/-1;}
 @media(min-width:900px){.fclr{grid-column:auto;}}
 .fclr:hover{border-color:var(--gold);color:var(--gold);}
-.rc{font-size:9px;color:rgba(255,255,255,0.4);margin-top:10px;}.rc span{color:var(--gold);font-weight:600;}
+.rc{font-size:9px;color:#666666;margin-top:10px;}.rc span{color:#b8960c;font-weight:600;}
 .pg{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:1400px;margin:0 auto;}
 @media(min-width:480px){.pg{gap:14px;}}
 @media(min-width:768px){.pg{grid-template-columns:repeat(3,1fr);gap:20px;}}
 @media(min-width:1100px){.pg{grid-template-columns:repeat(4,1fr);}}
-.pc{background:var(--white);position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer;border:1px solid rgba(201,168,76,0.1);}
+.pc{background:#ffffff;position:relative;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer;border:1px solid rgba(201,168,76,0.1);}
 .pc:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(201,168,76,0.12);}
-.piw{position:relative;overflow:hidden;aspect-ratio:3/4;background:linear-gradient(135deg,#f5f0e8,#ede5d8);}
+.piw{position:relative;overflow:hidden;aspect-ratio:3/4;background:linear-gradient(135deg,#f8f8f8,#eeeeee);}
 .piw img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
 .pc:hover .piw img{transform:scale(1.04);}
 .pgb{position:absolute;top:7px;left:7px;padding:2px 7px;font-size:7px;font-weight:600;letter-spacing:1px;text-transform:uppercase;background:rgba(14,11,8,0.8);color:var(--gold-light);}
@@ -76,15 +76,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .bqa{padding:8px 20px;background:var(--gold);color:var(--dark);font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;}
 .bda{padding:6px 20px;background:transparent;color:var(--white);font-family:'Montserrat',sans-serif;font-size:8px;letter-spacing:2px;text-transform:uppercase;border:1px solid rgba(255,255,255,0.3);cursor:pointer;}
 .pinfo{padding:10px;}
-.pbr{font-size:7px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:2px;}
-.pnm{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:var(--text);margin-bottom:3px;line-height:1.2;}
+.pbr{font-size:7px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#b8960c;margin-bottom:2px;}
+.pnm{font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:400;color:#111111;margin-bottom:3px;line-height:1.2;}
 .pfm{font-size:8px;color:var(--text-light);margin-bottom:6px;}
 .pnp{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:8px;}
-.nt{font-size:7px;padding:2px 5px;background:var(--cream);border:1px solid rgba(201,168,76,0.2);color:var(--text-light);}
+.nt{font-size:7px;padding:2px 5px;background:#f5f5f5;border:1px solid #e0e0e0;color:#666666;}
 .pft{display:flex;align-items:center;justify-content:space-between;}
 .ppr{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:400;color:var(--text);}
 .pph{font-size:10px;font-style:italic;color:var(--text-light);font-family:'Montserrat',sans-serif;}
-.bac{padding:6px 10px;background:var(--dark);color:var(--gold);font-size:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;transition:all 0.3s;font-family:'Montserrat',sans-serif;}
+.bac{padding:6px 10px;background:#111111;color:#b8960c;font-size:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;transition:all 0.3s;font-family:'Montserrat',sans-serif;}
 .bac:hover{background:var(--gold);color:var(--dark);}
 .co{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2000;opacity:0;pointer-events:none;transition:opacity 0.3s;}
 .co.open{opacity:1;pointer-events:all;}
@@ -121,7 +121,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .mm{background:var(--white);max-width:760px;width:100%;max-height:90vh;overflow-y:auto;display:flex;flex-direction:column;transform:scale(0.95);transition:transform 0.3s;}
 @media(min-width:580px){.mm{flex-direction:row;}}
 .mo.open .mm{transform:scale(1);}
-.miw{background:linear-gradient(135deg,#f5f0e8,#ede5d8);display:flex;align-items:center;justify-content:center;min-height:200px;flex-shrink:0;}
+.miw{background:linear-gradient(135deg,#f8f8f8,#eeeeee);display:flex;align-items:center;justify-content:center;min-height:200px;flex-shrink:0;}
 @media(min-width:580px){.miw{width:44%;min-height:380px;}}
 .miw img{width:100%;height:100%;object-fit:cover;}
 .mc{padding:24px 20px;display:flex;flex-direction:column;}
@@ -143,18 +143,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 .aw{background:var(--dark);}
 .as{padding:50px 16px;max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:32px;}
 @media(min-width:768px){.as{flex-direction:row;align-items:center;padding:70px 40px;gap:50px;}}
-.al{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+.al{font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#b8960c;margin-bottom:13px;}
 .at{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,5vw,40px);font-weight:300;color:var(--white);line-height:1.2;margin-bottom:15px;}
 .ab{font-size:12px;line-height:1.8;color:rgba(255,255,255,0.6);margin-bottom:12px;}
 .aci{display:flex;flex-direction:column;gap:7px;margin-top:13px;}
 .acit{display:flex;align-items:flex-start;gap:7px;font-size:11px;color:rgba(255,255,255,0.6);}
 .acic{color:var(--gold);font-size:13px;flex-shrink:0;margin-top:1px;}
-.aig{display:flex;align-items:center;gap:7px;color:var(--teal);font-size:11px;text-decoration:none;margin-top:7px;}
+.aig{display:flex;align-items:center;gap:7px;color:#4ab3b0;font-size:11px;text-decoration:none;margin-top:7px;}
 .avis{display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .aoc{width:190px;height:190px;border-radius:50%;border:1px solid rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;animation:rot 30s linear infinite;}
 .aic{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#e8f8f7,var(--teal) 60%,#2a9a97);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--white);font-style:italic;}
 @keyframes rot{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-.admsec{padding:50px 14px;background:var(--dark3);border-top:3px solid var(--gold-dark);}
+.admsec{padding:50px 14px;background:#1a1a1a;border-top:3px solid #8a6f2e;}
 @media(min-width:768px){.admsec{padding:60px 40px;}}
 .adm-wrap{max-width:1000px;margin:0 auto;}
 .adm-tabs{display:flex;border-bottom:1px solid rgba(201,168,76,0.2);overflow-x:auto;margin-bottom:24px;}
@@ -208,12 +208,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:ce
 footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(201,168,76,0.15);}
 .ftg{display:grid;grid-template-columns:1fr;gap:28px;max-width:1000px;margin:0 auto 28px;}
 @media(min-width:580px){.ftg{grid-template-columns:2fr 1fr 1fr;}}
-.fbe{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--white);margin-bottom:5px;}
+.fbe{font-family:'Cormorant Garamond',serif;font-size:24px;color:#ffffff;margin-bottom:5px;}
 .ftag{font-size:10px;font-style:italic;color:rgba(255,255,255,0.4);margin-bottom:12px;}
 .ftct{display:flex;flex-direction:column;gap:5px;margin-bottom:12px;}
 .ftcti{font-size:10px;color:rgba(255,255,255,0.5);display:flex;align-items:flex-start;gap:5px;}
 .ftig{color:var(--teal);font-size:10px;text-decoration:none;}
-.fct{font-size:8px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;}
+.fct{font-size:8px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:#d4b84a;margin-bottom:13px;}
 .fli{list-style:none;display:flex;flex-direction:column;gap:7px;}
 .fli li a{color:rgba(255,255,255,0.4);font-size:11px;text-decoration:none;transition:color 0.2s;}
 .fli li a:hover{color:var(--gold);}
@@ -229,7 +229,7 @@ footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(2
 
 <nav id="nav">
   <a href="#inicio" class="nav-logo">
-    <div class="nav-logo-circle"><span style="font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#1a1a1a;">E</span></div>
+    <div class="nav-logo-circle" style="background:none;overflow:hidden;"><img src="https://i.imgur.com/WkKt6OT.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
     <div><div class="nav-logo-eme">Eme</div><div class="nav-logo-sub">Aromas</div></div>
   </a>
   <div class="nav-links">
@@ -270,7 +270,8 @@ footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(2
   <div class="pg" id="pg"></div>
 </section>
 
-<div class="aw"><section class="as" id="nosotros">
+<div class="aw">
+<section class="as" id="nosotros">
   <div style="flex:1">
     <p class="al">Quiénes Somos</p>
     <h2 class="at">Aromas que despiertan <em style="font-style:italic;color:var(--gold);">emociones</em></h2>
@@ -282,12 +283,62 @@ footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(2
     </div>
     <a href="https://instagram.com/emearomas.sf" target="_blank" class="aig">📷 @emearomas.sf</a>
   </div>
-  <div class="avis"><div class="aoc"><div class="aic">E</div></div></div>
-</section></div>
+  <div class="avis"><img src="https://i.imgur.com/WkKt6OT.jpg" alt="Eme Aromas" style="width:200px;height:200px;border-radius:50%;object-fit:cover;border:3px solid rgba(184,150,12,0.3);"></div>
+</section>
+
+<!-- GALERÍA DEL LOCAL -->
+<div style="background:#ffffff;padding:50px 16px 60px;">
+  <div style="max-width:1000px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:32px;">
+      <p style="font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#b8960c;margin-bottom:10px;">Nuestro Local</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(24px,5vw,40px);font-weight:300;color:#111111;">Visitanos en <em style="font-style:italic;">San Martín 2254</em></h2>
+    </div>
+    <!-- Foto principal del local - vista general -->
+    <div style="margin-bottom:12px;border-radius:4px;overflow:hidden;height:320px;">
+      <img src="https://i.imgur.com/QdFHNGk.jpg" alt="Eme Aromas Local" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    <!-- Grid 3 fotos -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:12px;">
+      <div style="border-radius:4px;overflow:hidden;height:200px;">
+        <img src="https://i.imgur.com/fo7R03P.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="border-radius:4px;overflow:hidden;height:200px;">
+        <img src="https://i.imgur.com/sLBGIEW.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="border-radius:4px;overflow:hidden;height:200px;">
+        <img src="https://i.imgur.com/mo0qvFk.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+    </div>
+    <!-- Grid 2 fotos -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
+      <div style="border-radius:4px;overflow:hidden;height:220px;">
+        <img src="https://i.imgur.com/SRKZW2w.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="border-radius:4px;overflow:hidden;height:220px;">
+        <img src="https://i.imgur.com/5DHkFWI.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+    </div>
+    <!-- Grid últimas 2 -->
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:12px;">
+      <div style="border-radius:4px;overflow:hidden;height:200px;">
+        <img src="https://i.imgur.com/dMpiXCo.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="border-radius:4px;overflow:hidden;height:200px;">
+        <img src="https://i.imgur.com/6vRay0U.jpg" alt="Eme Aromas" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+    </div>
+    <!-- CTA -->
+    <div style="text-align:center;margin-top:32px;">
+      <p style="font-size:12px;color:#666;margin-bottom:16px;">Galería San Martín · Local 36 · Santa Fe, Argentina</p>
+      <a href="https://wa.me/5493425144455?text=Hola!%20Quiero%20visitarlos%20%F0%9F%8C%B8" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:12px 28px;background:#111111;color:#ffffff;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;text-transform:uppercase;text-decoration:none;transition:all 0.3s;" onmouseover="this.style.background='#b8960c'" onmouseout="this.style.background='#111111'">📍 Cómo llegar</a>
+    </div>
+  </div>
+</div>
+</div>
 
 <section class="admsec" id="admin">
   <div class="adm-wrap">
-    <div class="sh" style="margin-bottom:28px;"><p class="sl">Acceso Privado</p><h2 class="st" style="color:var(--white);">Panel de <em>Administración</em></h2></div>
+    <div class="sh" style="margin-bottom:28px;"><p class="sl">Acceso Privado</p><h2 class="st" style="color:#ffffff;">Panel de <em>Administración</em></h2></div>
     <div class="adm-login" id="admLogin">
       <h3 class="adm-ttl">Ingresar</h3><p class="adm-sub">Solo administradores</p>
       <input type="password" class="adm-inp" id="admPw" placeholder="Contraseña" onkeydown="if(event.key==='Enter')doLogin()">
