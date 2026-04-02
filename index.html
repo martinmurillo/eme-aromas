@@ -3,7 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Eme Aromas · Perfumes Árabes</title>
+
+<!-- ===== SEO BÁSICO ===== -->
+<title>Eme Aromas · Perfumes Árabes Originales en Santa Fe, Argentina</title>
+<meta name="description" content="Eme Aromas - Perfumes árabes originales en Santa Fe, Argentina. Lattafa, Armaf, Al Haramain, Paris Corner y más. Galería San Martín 2254, Local 36. Tel: 342 5 1 444 55.">
+<meta name="keywords" content="perfumes arabes santa fe, perfumeria santa fe argentina, lattafa santa fe, perfumes originales santa fe, eme aromas, perfumeria galeria san martin santa fe, perfumes arabes argentina, armaf santa fe, al haramain argentina">
+<meta name="author" content="Eme Aromas">
+<meta name="robots" content="index, follow">
+<meta name="language" content="Spanish">
+<meta name="geo.region" content="AR-S">
+<meta name="geo.placename" content="Santa Fe, Argentina">
+<meta name="geo.position" content="-31.6333;-60.7000">
+<meta name="ICBM" content="-31.6333, -60.7000">
+
+<!-- ===== OPEN GRAPH (redes sociales) ===== -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://eme-aromas.vercel.app/">
+<meta property="og:title" content="Eme Aromas · Perfumes Árabes en Santa Fe">
+<meta property="og:description" content="Perfumes árabes originales en Santa Fe. Lattafa, Armaf, Al Haramain y más. Visitanos en Galería San Martín 2254, Local 36.">
+<meta property="og:image" content="https://raw.githubusercontent.com/martinmurillo/eme-aromas/main/IMG-20260331-WA0000.jpg">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Eme Aromas">
+
+<!-- ===== TWITTER CARD ===== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eme Aromas · Perfumes Árabes en Santa Fe">
+<meta name="twitter:description" content="Perfumes árabes originales en Santa Fe, Argentina.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/martinmurillo/eme-aromas/main/IMG-20260331-WA0000.jpg">
+
+<!-- ===== SCHEMA MARKUP - NEGOCIO LOCAL ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Eme Aromas",
+  "alternateName": "Eme Home Aromas y Emociones",
+  "description": "Perfumes árabes originales. Lattafa, Armaf, Al Haramain, Paris Corner y más marcas.",
+  "url": "https://eme-aromas.vercel.app",
+  "logo": "https://raw.githubusercontent.com/martinmurillo/eme-aromas/main/IMG-20260331-WA0000.jpg",
+  "image": "https://raw.githubusercontent.com/martinmurillo/eme-aromas/main/IMG-20260331-WA0000.jpg",
+  "telephone": "+5493425144455",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "San Martín 2254, Galería San Martín Local 36",
+    "addressLocality": "Santa Fe",
+    "addressRegion": "Santa Fe",
+    "addressCountry": "AR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -31.6333,
+    "longitude": -60.7000
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "13:00"
+    }
+  ],
+  "priceRange": "$$",
+  "currenciesAccepted": "ARS",
+  "paymentAccepted": "Cash, Credit Card, MercadoPago",
+  "hasMap": "https://maps.google.com/?q=San+Martín+2254+Santa+Fe+Argentina",
+  "sameAs": [
+    "https://www.instagram.com/emearomas.sf"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "category": "Perfumes Árabes Originales"
+  }
+}
+</script>
+
+<!-- ===== FAVICON ===== -->
+<link rel="canonical" href="https://eme-aromas.vercel.app/">
 <link rel="icon" type="image/jpeg" href="favicon.ico">
 <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/martinmurillo/eme-aromas/main/IMG-20260331-WA0000.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -256,7 +337,7 @@ footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(2
   </div>
 </section>
 
-<section class="catalog-section" id="catalogo">
+<section class="catalog-section" id="catalogo" aria-label="Catálogo de perfumes árabes">
   <div class="sh"><p class="sl">Nuestra Colección</p><h2 class="st">Descubrí tu <em>fragancia perfecta</em></h2></div>
   <div class="fw">
     <div class="fg">
@@ -273,7 +354,7 @@ footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(2
 </section>
 
 <div class="aw">
-<section class="as" id="nosotros">
+<section class="as" id="nosotros" aria-label="Sobre Eme Aromas - Perfumería en Santa Fe">
   <div style="flex:1">
     <p class="al">Quiénes Somos</p>
     <h2 class="at">Aromas que despiertan <em style="font-style:italic;color:var(--gold);">emociones</em></h2>
@@ -402,7 +483,10 @@ footer{background:var(--dark);padding:44px 16px 22px;border-top:1px solid rgba(2
       <ul class="fli"><li><a href="#" onclick="setF('fM','Lattafa');return false;">Lattafa</a></li><li><a href="#" onclick="setF('fM','Armaf');return false;">Armaf</a></li><li><a href="#" onclick="setF('fM','Al Haramain');return false;">Al Haramain</a></li><li><a href="#" onclick="setF('fM','Afnan');return false;">Afnan</a></li></ul>
     </div>
   </div>
-  <div class="fbot">© 2025 Eme Aromas · San Martín 2254 · Galería San Martín Local 36 · Tel: 342 5 1 444 55</div>
+  <div class="fbot">© 2025 Eme Aromas · San Martín 2254 · Galería San Martín Local 36 · Santa Fe, Argentina · Tel: 342 5 1 444 55</div>
+<div style="font-size:9px;color:rgba(255,255,255,0.12);margin-top:8px;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;">
+Perfumes árabes originales en Santa Fe · Lattafa · Armaf · Al Haramain · Paris Corner · Zimaya · Rasasi · Maison Alhambra · Perfumería Santa Fe Argentina
+</div>
 </footer>
 
 <div class="co" id="co" onclick="toggleCart()"></div>
